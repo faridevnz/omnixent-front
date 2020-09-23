@@ -26,6 +26,8 @@
     },
     "types": [
       "@types/node",
+      "@types/mocha",
+      "@types/jest",
       "@nuxt/types"
     ]
   },
