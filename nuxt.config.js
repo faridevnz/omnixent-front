@@ -1,3 +1,6 @@
+import messages from './i18n/messages'
+
+
 export default {
   // Target (https://go.nuxtjs.dev/config-target)
   target: 'static',
@@ -34,6 +37,17 @@ export default {
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
+    [
+      'nuxt-i18n',
+      {
+        locales: ['en'],
+        defaultLocale: 'en',
+        vueI18n: {
+          fallbackLocale: 'en',
+          messages
+        }
+      }
+    ]
   ],
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)

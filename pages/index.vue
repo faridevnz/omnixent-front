@@ -3,7 +3,7 @@
     <div>
       <Logo />
       <h1 class="title">
-        omnixent-front
+        {{ $t('title') }}
       </h1>
       <div class="links">
         <a
