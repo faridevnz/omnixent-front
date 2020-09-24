@@ -5,7 +5,9 @@
       <h1 class="title">
         {{ $t('title') }}
       </h1>
-      <h2 class="subtitle">{{ $t('wipMessage') }}</h2>
+      <h2 class="subtitle">
+        {{ $t('wipMessage') }}
+      </h2>
     </div>
   </div>
 </template>
@@ -13,7 +15,13 @@
 <script lang="ts">
 import Vue from 'vue'
 
-export default Vue.extend({})
+export default Vue.extend({
+  mounted () {
+    this.$omnixentClient.search('java', 'google', 'en', 'us').then((data) => {
+      console.log(data)
+    })
+  }
+})
 </script>
 
 <style>
