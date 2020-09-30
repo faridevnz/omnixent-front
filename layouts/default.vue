@@ -1,5 +1,6 @@
 <template>
   <div>
+    <div>{{ $t('followUs') }}</div>
     <Nuxt />
   </div>
 </template>

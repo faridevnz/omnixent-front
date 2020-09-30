@@ -8,7 +8,6 @@
       <h2 class="subtitle">
         {{ $t('wipMessage') }}
       </h2>
-      <button @click="getReport()">Search questions</button>
     </div>
   </div>
 </template>
@@ -17,13 +16,10 @@
 import Vue from 'vue'
 
 export default Vue.extend({
-  methods: {
-    getReport() {
-      this.$omnixentClient.search('java', 'google', 'en', 'us').then(({data}) => {
-        console.log(data.result.uuid)
-        this.$router.push({ name: 'reports-id', params: { id: data.result.uuid }})
-      })
-    }
+  mounted () {
+    this.$omnixentClient.getReport(this.$route.params.id).then((data) => {
+      console.log(data)
+    })
   }
 })
 </script>

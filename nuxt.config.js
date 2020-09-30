@@ -2,7 +2,7 @@ import messages from './i18n/messages'
 
 export default {
   // Target (https://go.nuxtjs.dev/config-target)
-  target: 'static',
+  target: 'server',
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
@@ -40,6 +40,7 @@ export default {
     [
       'nuxt-i18n',
       {
+        strategy: 'no_prefix',
         locales: ['en'],
         defaultLocale: 'en',
         vueI18n: {
