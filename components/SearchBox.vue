@@ -19,7 +19,7 @@
 import Vue from 'vue'
 
 export default Vue.extend({
-  data: function () {
+  data () {
     return {
       query: '',
       selectedLanguage: 'en',
@@ -42,12 +42,12 @@ export default Vue.extend({
         {
           value: 'it',
           text: 'Italy'
-        },
+        }
       ]
     }
   },
   methods: {
-    startSearch()  {
+    startSearch () {
       this.$emit('searchStarted', this.query, this.selectedLanguage, this.selectedCountry)
     }
   }
