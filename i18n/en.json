@@ -1,5 +1,10 @@
 {
     "title": "Omnixent",
     "wipMessage": "Omnixent Frontend made with Nuxt.js (WIP)",
-    "followUs": "Follow us on Github"
+    "followUs": "Follow us on Github",
+    "search": "Search",
+    "English": "English",
+    "Italian": "Italian",
+    "Italy": "Italy",
+    "UK": "United Kingdom"
 }

@@ -1,7 +1,7 @@
 <template>
   <div>
     <input v-model="query"/>
-    <button :disabled="query == ''" @click="startSearch()">Search questions</button>
+    <button :disabled="query == ''" @click="startSearch()">{{$t('search')}}</button>
     <select v-model="selectedLanguage">
       <option v-for="languageOption in languageOptions" :value="languageOption.value" :key="languageOption.value">
         {{ languageOption.text }}
@@ -17,6 +17,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
+import { TranslateResult } from 'vue-i18n'
 
 export default Vue.extend({
   data () {
@@ -27,21 +28,21 @@ export default Vue.extend({
       languageOptions: [
         {
           value: 'en',
-          text: 'English'
+          text: this.$t('English') as TranslateResult
         },
         {
           value: 'it',
-          text: 'Italian'
+          text: this.$t('Italian') as TranslateResult
         }
       ],
       countryOptions: [
         {
           value: 'uk',
-          text: 'UK'
+          text: this.$t('UK') as TranslateResult
         },
         {
           value: 'it',
-          text: 'Italy'
+          text: this.$t('Italy') as TranslateResult
         }
       ]
     }
