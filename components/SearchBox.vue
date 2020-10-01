@@ -1,7 +1,7 @@
 <template>
   <div>
     <input v-model="query"/>
-    <button @click="startSearch()">Search questions</button>
+    <button :disabled="query == ''" @click="startSearch()">Search questions</button>
     <select v-model="selectedLanguage">
       <option v-for="languageOption in languageOptions" :value="languageOption.value" :key="languageOption.value">
         {{ languageOption.text }}
