@@ -37,6 +37,7 @@ export default {
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
+    '@nuxtjs/style-resources',
     [
       'nuxt-i18n',
       {
@@ -50,6 +51,12 @@ export default {
       }
     ]
   ],
+
+  styleResources: {
+    scss: [
+      '~/assets/scss/variables.scss'
+    ]
+  },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {

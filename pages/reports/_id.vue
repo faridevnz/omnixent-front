@@ -13,3 +13,7 @@ export default Vue.extend({
   }
 })
 </script>
+
+<style lang="scss" scoped>
+  /* local styles */
+</style>

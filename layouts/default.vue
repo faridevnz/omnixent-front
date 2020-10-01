@@ -13,7 +13,7 @@
   </div>
 </template>
 
-<style>
+<style lang="scss">
 html {
   font-family:
     'Source Sans Pro',
@@ -38,6 +38,10 @@ html {
 *::after {
   box-sizing: border-box;
   margin: 0;
+}
+
+body {
+  background: $background;
 }
 
 .button--green {
@@ -70,7 +74,6 @@ html {
 }
 
 .container {
-  background: #0F0D53;
   margin: 0 auto;
   min-height: 100vh;
   display: flex;
