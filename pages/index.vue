@@ -1,20 +1,13 @@
 <template>
-  <SearchBox @searchStarted="getReport"/>
+  <Home />
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import Home from '@/pages/Home.vue'
 
-export default Vue.extend({
-  methods: {
-    getReport (query: string, selectedService: string, selectedLanguage: string, selectedCountry: string) {
-      this.$omnixentClient.search(query, selectedService, selectedLanguage, selectedCountry).then(({ data }) => {
-        console.log(data.result.uuid)
-        this.$router.push({ name: 'reports-id', params: { id: data.result.uuid } })
-      })
-    }
-  }
-})
+export default {
+  components: { Home }
+}
 </script>
 
 <style lang="scss" scoped>
