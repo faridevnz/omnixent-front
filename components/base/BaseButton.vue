@@ -24,7 +24,7 @@ export default {
     return {
       // Style data
       dimension: {
-        width: `${this.width}px`,
+        width: `${this.width}vw`,
         height: `${this.height}px`
       }
     }

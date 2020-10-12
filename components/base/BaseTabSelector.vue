@@ -3,7 +3,7 @@
     <BaseButton
       v-for="(item, index) in tabItems"
       :key="index"
-      width="120"
+      width="9"
       height="60"
       :color="whichSelected === index ? 'secondary' : 'background'"
       @click="changeTab(index)"
@@ -42,7 +42,7 @@ export default {
     changeTab (index: number): void {
       this.selectedTab = index
       // event emission when change the selected tab
-      this.$emit('tabChange', index)
+      this.$emit('tabChange', this.tabItems[index])
     }
   }
 }

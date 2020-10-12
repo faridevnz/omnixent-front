@@ -6,7 +6,9 @@
       </BaseIcon>
     </BaseInputWithButton>
     <br>
-    <BaseTabSelector width="21" :tab-items="availableServices" @tabChange="changeService" />
+    <BaseTabSelector width="30" :tab-items="availableServices" @tabChange="changeService" />
+    <br>
+    <BaseListSelector width="10" height="50" :options-list="supportedLang" @optionChange="changeLang" />
   </div>
 </template>
 
@@ -19,6 +21,8 @@ export default {
     return {
       availableServices: ['Google', 'YouTube', 'Amazon'],
       selectedService: 'Google',
+      supportedLang: ['italiano', 'english', 'spanish'],
+      selectedLang: 'italiano',
       query: ''
     }
   },
@@ -27,8 +31,11 @@ export default {
       // search method
       this.query = query
     },
-    changeService (newServiceIndex: number): void {
-      this.selectedService = this.availableServices[newServiceIndex]
+    changeService (newService: string): void {
+      this.selectedService = newService
+    },
+    changeLang (newLang: string): void {
+      this.selectedLang = newLang
     }
   }
 }

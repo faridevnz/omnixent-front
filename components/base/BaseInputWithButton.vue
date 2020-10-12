@@ -68,6 +68,7 @@ export default {
     top: 0px;
     bottom: 0px;
     width: 13%;
+    min-width: 120px;
     border-radius: 0 20px 20px 0;
     border: none;
     background-color: $primary;
