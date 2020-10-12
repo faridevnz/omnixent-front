@@ -8,7 +8,10 @@
     <br>
     <BaseTabSelector width="30" :tab-items="availableServices" @tabChange="changeService" />
     <br>
-    <BaseListSelector width="10" height="50" :options-list="supportedLang" @optionChange="changeLang" />
+    <div class="selectors">
+      <BaseListSelector width="10" height="50" :options-list="supportedLangs" @optionChange="changeLang" />
+      <BaseListSelector width="20" height="50" :options-list="supportedCountries" @optionChange="changeCountry" />
+    </div>
   </div>
 </template>
 
@@ -21,8 +24,10 @@ export default {
     return {
       availableServices: ['Google', 'YouTube', 'Amazon'],
       selectedService: 'Google',
-      supportedLang: ['italiano', 'english', 'spanish'],
+      supportedLangs: ['italiano', 'english', 'spanish'],
       selectedLang: 'italiano',
+      supportedCountries: ['🇮🇹 Italia', '🇳🇱 Paesi Bassi', '🇨🇺 Cuba', '🇩🇪 Germania', '🇫🇷 Francia'],
+      selectedCountry: 'italia',
       query: ''
     }
   },
@@ -36,11 +41,19 @@ export default {
     },
     changeLang (newLang: string): void {
       this.selectedLang = newLang
+    },
+    changeCountry (newCountry: string): void {
+      // eliminiamo la bandiera dal nome del paele
+      this.selectedCountry = newCountry.split(' ')[1]
     }
   }
 }
 </script>
 
-<style>
-
+<style lang="scss" scoped>
+.selectors {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 </style>
