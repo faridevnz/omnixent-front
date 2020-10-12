@@ -11,9 +11,15 @@ import RightArrow from '@/assets/icons/RightArrow.vue'
 
 export default {
   components: { RightArrow },
+  data () {
+    return {
+      query: ''
+    }
+  },
   methods: {
-    startSearch (): void {
+    startSearch (query: string): void {
       // search method
+      this.query = query
     }
   }
 }
